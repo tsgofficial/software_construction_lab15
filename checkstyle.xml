@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <module name="TreeWalker">
+
+        <!-- Code style rules -->
+        <module name="NeedBraces"/>
+        <module name="LeftCurly"/>
+        <module name="RightCurly"/>
+        <module name="EmptyBlock"/>
+
+        <!-- Class design rules -->
+        <module name="HideUtilityClassConstructor"/>
+        <module name="MissingJavadocType"/>
+        <module name="MissingJavadocMethod"/>
+
+        <!-- Naming conventions -->
+        <module name="ConstantName"/>
+        <module name="LocalVariableName"/>
+        <module name="MemberName"/>
+        <module name="MethodName"/>
+        <module name="PackageName"/>
+        <module name="ParameterName"/>
+        <module name="TypeName"/>
+
+        <!-- Size rules -->
+        <module name="MethodLength">
+            <property name="max" value="100"/>
+        </module>
+        <module name="LineLength">
+            <property name="max" value="120"/>
+        </module>
+
+        <!-- Miscellaneous -->
+        <module name="FileTabCharacter">
+            <property name="eachLine" value="true"/>
+        </module>
+        <module name="FinalParameters"/>
+        <module name="MultipleVariableDeclarations"/>
+        <module name="WhitespaceAfter"/>
+        <module name="WhitespaceAround"/>
+        <module name="NoWhitespaceBefore"/>
+        <module name="OperatorWrap"/>
+        <module name="RegexpSingleline">
+            <property name="format" value="\s+$"/>
+            <property name="message" value="Line has trailing spaces."/>
+            <property name="ignoreComments" value="true"/>
+        </module>
+
+    </module>
+
+    <!-- Enforce newline at end of file -->
+    <module name="NewlineAtEndOfFile"/>
+
+</module>
