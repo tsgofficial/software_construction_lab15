@@ -1,4 +1,4 @@
-name: CI Процесс
+name: CI process
 
 on:
   push:
@@ -15,20 +15,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Кодыг checkout хийх
+      - name: Code checkout
         uses: actions/checkout@v4
 
-      - name: JDK 17 Тохируулах
+      - name: Set JDK 17
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Checkstyle Шалгах
+      - name: Check checkstyle 
         run: mvn checkstyle:check
 
-      - name: JUnit Тест ба JaCoCo Coverage Шалгах
+      - name: JUnit test and check JaCoCo coverage
         run: mvn test jacoco:check
 
-      - name: JaCoCo Тайлан Үүсгэх
+      - name: Create JaCoCo report 
         run: mvn jacoco:report
