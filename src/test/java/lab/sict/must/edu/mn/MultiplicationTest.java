@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class MultiplicationTest {
     // test commit 
-    // test conflict 2
+    // test conflict 
     @Test
 
     void testMultiplyPositive() {
